@@ -91,27 +91,6 @@ Inherits all methods of `StandardFEM`, adds:
 
 ---
 
-## Testing
-
-Run the test suite with:
-
-```bash
-pytest --maxfail=1 --disable-warnings -q
-```
-
----
-
-## Contributing
-
-1. Fork the repo
-2. Create your feature branch (`git checkout -b feature/foo`)
-3. Commit your changes (`git commit -am 'Add foo'`)
-4. Push to branch (`git push origin feature/foo`)
-5. Open a Pull Request
-
-Please ensure that all new features come with appropriate tests.
-
----
 
 ## License
 
@@ -123,7 +102,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you use **Helmholtz-FEM** in published work, please cite:
 
-> **Your Name**, *Helmholtz-FEM: Standard and plasmonic-enriched FEM solvers for Helmholtz scattering*, Version 0.1.0, 2025.
+> **Benjamin Latham**, *Helmholtz-FEM: Standard and plasmonic-enriched FEM solvers for Helmholtz scattering*, Version 0.1.0, 2025.
 > DOI: *to be assigned*
 
 ```
