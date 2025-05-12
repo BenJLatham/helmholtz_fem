@@ -27,9 +27,11 @@ jobs:
 
     - name: Create environment
       run: |
-        conda install netgen ngsolve meshio scipy numpy cxroots pytest pytest-cov flake8
-        pip install -e .   # install your package
-
+          conda create -n testenv python=3.10 -y
+          conda activate testenv
+          conda install -c conda-forge netgen=6.2.2006 ngsolve meshio scipy numpy cxroots pytest pytest-cov flake8
+          pip install -e .
+      
     - name: Run tests
       run: pytest --maxfail=1 --disable-warnings -q
 
