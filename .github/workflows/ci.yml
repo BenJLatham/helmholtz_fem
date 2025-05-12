@@ -10,22 +10,25 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.9", "3.10"]
-
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+      # ← Add this before you pip-install your package
+      - name: Install Netgen & NGSolve
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y netgen libngsolve6-dev
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -e .[test]
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Run tests
-      run: pytest --maxfail=1 --disable-warnings -q
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[test]
+
+      - name: Run tests
+        run: pytest --maxfail=1 --disable-warnings -q
+
