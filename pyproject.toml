@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helmholtz_fem"
+version = "0.1.0"
+description = "Standard and plasmonic-enriched finite-element solvers for Helmholtz scattering by a dielectric sphere"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Ben Latham", email = "blatham@ucmerced.edu" }
+]
+keywords = ["helmholtz", "fem", "ngsolve", "plasmonics", "finite element"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Physics",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10"
+]
+dependencies = [
+  "numpy>=1.20",
+  "scipy>=1.7",
+  "meshio>=5.0",
+  "netgen>=9.0",
+  "ngsolve>=6.2",
+  "gmsh-sdk>=4.8",
+  "cxroots>=0.3"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=6.0",
+  "pytest-cov",
+  "flake8"
+]
+docs = [
+  "sphinx",
+  "furo"
+]
+
+[project.urls]
+Homepage = "https://github.com/BenJLatham/helmholtz_fem"
+Repository = "https://github.com/BenJLatham/helmholtz_fem.git"
