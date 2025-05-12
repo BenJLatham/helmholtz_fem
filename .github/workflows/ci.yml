@@ -26,9 +26,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # ensure we’re on the pinned Python
-        conda install -y -c conda-forge \
-          python=${{ matrix.python-version }} \
+        # install into the base conda env, pulling ngsolve from its channel
+        conda install -y \
+          -c ngsolve \
+          -c conda-forge \
           netgen=6.2.2006 \
           ngsolve \
           meshio \
@@ -38,7 +39,8 @@ jobs:
           pytest \
           pytest-cov \
           flake8
-        # now install our package (with test extras)
+        
+        # now install your package and test deps
         pip install -e .[test]
 
     - name: Run tests
