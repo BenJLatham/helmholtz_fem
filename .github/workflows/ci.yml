@@ -26,10 +26,19 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # install Netgen, NGSolve, and the rest into the base env
+        # ensure we’re on the pinned Python
         conda install -y -c conda-forge \
-          netgen=6.2.2006 ngsolve meshio scipy numpy cxroots pytest pytest-cov flake8
-        # install your package (and test extras)
+          python=${{ matrix.python-version }} \
+          netgen=6.2.2006 \
+          ngsolve \
+          meshio \
+          scipy \
+          numpy \
+          cxroots \
+          pytest \
+          pytest-cov \
+          flake8
+        # now install our package (with test extras)
         pip install -e .[test]
 
     - name: Run tests
