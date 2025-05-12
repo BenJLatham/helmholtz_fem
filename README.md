@@ -1,4 +1,3 @@
-````markdown
 # Helmholtz-FEM
 
 [![CI](https://github.com/BenJLatham/helmholtz_fem/actions/workflows/ci.yml/badge.svg)](https://github.com/BenJLatham/helmholtz_fem/actions) [![PyPI version](https://badge.fury.io/py/helmholtz_fem.svg)](https://pypi.org/project/helmholtz_fem) [![Coverage Status](https://coveralls.io/repos/github/BenJLatham/helmholtz_fem/badge.svg?branch=main)](https://coveralls.io/github/BenJLatham/helmholtz_fem?branch=main)
