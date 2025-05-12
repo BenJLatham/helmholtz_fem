@@ -1,8 +1,9 @@
 # Helmholtz-FEM
 
-[![CI](https://github.com/BenJLatham/helmholtz_fem/actions/workflows/ci.yml/badge.svg)](https://github.com/BenJLatham/helmholtz_fem/actions) [![PyPI version](https://badge.fury.io/py/helmholtz_fem.svg)](https://pypi.org/project/helmholtz_fem) [![Coverage Status](https://coveralls.io/repos/github/BenJLatham/helmholtz_fem/badge.svg?branch=main)](https://coveralls.io/github/BenJLatham/helmholtz_fem?branch=main)
+[![CI](https://github.com/BenJLatham/helmholtz_fem/actions/workflows/ci.yml/badge.svg)](https://github.com/BenJLatham/helmholtz_fem/actions) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15391513.svg)](https://doi.org/10.5281/zenodo.15391513)
 
 Standard and plasmonic-enriched finite-element solvers for Helmholtz scattering by a dielectric sphere, built on Gmsh + Netgen + NGSolve.
+
 
 ---
 
@@ -20,12 +21,8 @@ Standard and plasmonic-enriched finite-element solvers for Helmholtz scattering 
 ## Installation
 
 ```bash
-# Clone repository
 git clone https://github.com/BenJLatham/helmholtz_fem.git
 cd helmholtz_fem
-
-# Install in editable mode (requires cmake for Netgen, Gmsh SDK installed,
-# plus Python packages: numpy, scipy, meshio, netgen, ngsolve, cxroots)
 pip install -e .[test]
 ````
 
@@ -103,7 +100,7 @@ This project is licensed under the [MIT License](LICENSE).
 If you use **Helmholtz-FEM** in published work, please cite:
 
 > **Benjamin Latham**, *Helmholtz-FEM: Standard and plasmonic-enriched FEM solvers for Helmholtz scattering*, Version 0.1.0, 2025.
-> DOI: *to be assigned*
+> DOI: 10.5281/zenodo.15391513
 
 ```
 ```
