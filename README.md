@@ -1,5 +1,5 @@
 # Helmholtz-FEM
-
+We acknowledge support from NSF Grant DMS-2009366.
 [![CI](https://github.com/BenJLatham/helmholtz_fem/actions/workflows/ci.yml/badge.svg)](https://github.com/BenJLatham/helmholtz_fem/actions) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15391513.svg)](https://doi.org/10.5281/zenodo.15391513)
 
 Standard and plasmonic-enriched finite-element solvers for Helmholtz scattering by a dielectric sphere, built on Gmsh + Netgen + NGSolve.
